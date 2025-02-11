@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="descrição"
+      content="Bem vindo à Clínica Miotto, aqui temos um atendimento rápido, personalizado e de qualidade."
+    />
+    <title>Clínica Miotto</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Clínica Miotto Health</h1>
+    </header>
+    
+    <main>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+
+      <form enctype="multipart/form-data" action="cadastra.php" method="post">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <div class="valida">
+            <label for="nome">Nome:</label>
+            <input 
+              type="text"
+              name="clientName"
+              id="nome"
+              minlength="2"
+              maxlength="50"
+              autofocus
+              required
+            />
+          </div>
+          <div class="valida">
+            <label for="email">E-mail:</label>
+            <input  type="email" name="clientEmail" id="email" required />
+          </div>
+          <div class="valida">
+            <label for="cpf">CPF:</label>
+            <input 
+              type="text"
+              placeholder="Exemplo: xxx.xxx.xxx-xx"
+              required
+              pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+              name="clientCPF"
+              id="cpf"
+            />
+          </div>
+          <div class="valida">
+            <label for="idade">Idade:</label>
+            <input  type="number" name="clientIdade" id="idade" required />
+          </div>
+          <div class="valida">
+            <label for="telefone">Telefone:</label>
+            <input 
+              type="tel"
+              name="clientTelefone"
+              id="telefone"
+              required
+              pattern="\d{5}\-\d{4}"
+            />
+          </div>
+          <div>
+            <label for="dataNasc">Data de Nascimento:</label>
+            <input type="date" name="clientDataNasc" id="dataNasc" />
+          </div>
+
+          <fieldset>
+            <legend>Sexo</legend>
+            <div>
+              <input type="radio" name="clientSexo" id="masculino" />
+              <label for="masculino">Masculino</label>
+            </div>
+            <div>
+              <input type="radio" name="clientSexo" id="feminino" />
+              <label for="feminino">Feminino</label>
+            </div>
+            <div>
+              <input type="radio" name="clientSexo" id="prefiroNaoInformar" />
+              <label for="prefiroNaoInformar">Prefiro não informar</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Estado Civil</legend>
+            <div>
+              <input type="radio" name="clientEstadoCivil" id="solteiro" />
+              <label for="solteiro">Solteiro</label>
+            </div>
+            <div>
+              <input type="radio" name="clientEstadoCivil" id="casado" />
+              <label for="casado">Casado</label>
+            </div>
+            <div>
+              <input type="radio" name="clientEstadoCivil" id="separado" />
+              <label for="separado">Separado</label>
+            </div>
+            <div>
+              <input type="radio" name="clientEstadoCivil" id="divorciado" />
+              <label for="divorciado">Divorciado</label>
+            </div>
+            <div>
+              <input type="radio" name="clientEstadoCivil" id="viuvo" />
+              <label for="viuvo">Viúvo</label>
+            </div>
+          </fieldset>
+
+          <div>
+            <input type="hidden" name="controle" id="controle" />
+          </div>
+
+          <div>
+            <label for="cliente"></label>
+            <input
+              type="text"
+              name="clientGrupo"
+              id="cliente"
+              readonly
+              value="Cliente"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço de Entrega</legend>
+          <div>
+            <label for="cep">CEP:</label>
+            <input type="text" name="clientCEP" id="cep" required />
+          </div>
+
+          <fieldset>
+            <legend>Logradouro</legend>
+            <div>
+              <input type="radio" name="clientTipoLogradouro" id="rua" />
+              <label for="rua">Rua</label>
+            </div>
+            <div>
+              <input type="radio" name="clientTipoLogradouro" id="avenida" />
+              <label for="avenida">Avenida</label>
+            </div>
+            <div>
+              <input type="radio" name="clientTipoLogradouro" id="praça" />
+              <label for="praça">Praça</label>
+            </div>
+          </fieldset>
+
+          <div>
+            <label for="logradouro">Logradouro:</label>
+            <input
+              type="text"
+              name="clientLogradouro"
+              id="logradouro"
+              required
+            />
+          </div>
+          <div>
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="clientBairro" id="bairro" required />
+          </div>
+          <div>
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="clientCidade" id="cidade" required />
+          </div>
+          <div>
+            <label for="estado">Estado:</label>
+            <select name="clientEstado" id="estado">
+              <option value="AC" selected>Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações Adicionais</legend>
+          <fieldset>
+            <legend>Interesses</legend>
+            <div>
+              <input type="checkbox" name="clientInteresse" id="filmes" />
+              <label for="filmes">Filmes</label>
+            </div>
+            <div>
+              <input type="checkbox" name="clientInteresse" id="informatica" />
+              <label for="informatica">Informática</label>
+            </div>
+            <div>
+              <input type="checkbox" name="clientInteresse" id="games" />
+              <label for="games">Games</label>
+            </div>
+            <div>
+              <input type="checkbox" name="clientInteresse" id="livros" />
+              <label for="livros">Livros</label>
+            </div>
+            <div>
+              <input type="checkbox" name="clientInteresse" id="roupas" />
+              <label for="roupas">Roupas</label>
+            </div>
+          </fieldset>
+
+          <div>
+            <textarea
+              name="clientComentario"
+              id="coment"
+              placeholder="Deixe aqui uma sugestão ou comentário"
+              rows="3"
+              cols="75"
+            ></textarea>
+          </div>
+
+          <div>
+            <input type="file" name="clientImage" accept="image/*" />
+          </div>
+        </fieldset>
+
+        <button>Enviar Formulário</button>
+      </form>
+      
+      <footer>
+        <address>
+          Av. João Naves de Ávila, 2121 - Santa Mônica, Uberlândia - MG
+        </address>
+      </footer>
+    
+    </main>
+
+  </body>
+</html>
