@@ -1,0 +1,59 @@
+body {
+    background-color: rgb(190, 188, 188);
+    font-family: Helvetica;
+    margin: 7px 0px;
+}
+
+header {
+    text-align: center;
+    font-size: 8px;
+    padding: 5px;
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 250px;
+    max-width: 350px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card h1 {
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: small;
+}
+
+.card span {
+    font-size: small;
+    color: rgb(253, 0, 0);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
