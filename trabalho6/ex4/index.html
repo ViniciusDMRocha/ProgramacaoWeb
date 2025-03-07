@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 6 - Exercicio 4</title>
+</head>
+
+<body>
+    <p>Analisando os slides 33/34 e vendo como funciona a estrutura da Árvore DOM podemos identificar o que cada um dos elementos abaixo representa.</p>
+    <p>[object Text] => Esse Object Text é um nó filho do body, no qual se enquadra no tipo de Nó Textual, nesse caso e nos demais ele representa o texto, mesmo que vazio, que existe entre os elementos, esses espaços, mesmo sendo referente a identação são considerados na Árvore DOM.</p>
+    <p>[object HTMLHeadingElement] => Esse objeto é o que representa o nosso h2 na árvore DOM.</p>
+    <p>[object Text] => Esse outro Object Text funciona da mesma maneira que o primeiro, representa o espaço entre o h2 e o input.</p>
+    <p>[object HTMLInputElement] => Representa o input que temos abaixo do h2.</p>
+    <p>[object Text] => Assim como os demais Object Text, esse representa o espaço entre o input e o comentário.</p>
+    <p>[object Comment] => Representa o comentário que temos entre o input e o PreElement.</p>
+    <p>[object Text] => Representa o espaço entre o comentário e o PreElement.</p>
+    <p>[object HTMLPreElement] => Esse nó da árvore DOM é referente ao &lt;pre&gt; que temos com o id = output.</p>
+    <p>[object Text] => Espaço entre o PreElement e o Script.
+    <p>[object HTMLScriptElement] => Aqui temos o script.</p>
+    <p>true => Esse campo true representa o resultado de um instaceOf comparando o input com o HTMLInputElement, já que é uma comparação válida temos o resultado "true".</p>
+    <p>true => Aqui temos algo que a primeira vista parece ser esquisito, um input não é um HTMLElement. Mas nos slides 33/34 temos a explicação que toda a árvore DOM possui meio que uma herança, então se o HTMLInputElement é filho do HTMLElement, ele de certa forma também vai ser considerado um HTMLElement. </p>
+    <p>true => Aqui é a mesma coisa que temos acima, o HTMLElement é filho do Element, logo o input é do tipo Element também.</p>
+    <p>true => Se subirmos mais um nó na árvore, vemos que o Element vem do Node, logo a afirmação se torna verdadeira.</p>
+    <p>true => Aqui chegamos ao todo da árvore, o Node é filho do EventTarget, portanto o input que está lá embaixo ainda pode ser considerado de certa forma um EventTarget.</p>
+    <p>[object HTMLDocument] => Aqui temos o print do constructor.prototyoe do document, que é o próprio HTMLDocument.</p>
+</body>
+</html>

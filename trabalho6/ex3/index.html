@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho 6 - Exercicio 3</title>
+</head>
+
+<body>
+    <div>
+        <label for="altura">Digite sua altura (cm):</label>
+        <input type="text" id="altura" name="userAltura" required>
+    </div>
+    <div>
+        <label for="sexo">Selecione seu sexo:</label>
+        <select name="userSexo" id="sexo">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+        </select>
+    </div>
+
+    <button type="button">Calcular peso ideal do usuário</button>
+
+    <p></p>
+
+    <script>
+        const inputAltura = document.querySelector('input[name="userAltura"]')
+        const selectSexo = document.querySelector('select[name="userSexo"]')
+        const botao = document.querySelector("button");
+        const pSaida = document.querySelector("p");
+        
+        botao.onclick = () => {
+
+            let altura = parseInt(inputAltura.value);
+            let sexo = selectSexo.value;
+            let fator = 0; 
+
+            if (sexo == "masculino") {
+                fator = 0.75;
+            } else {
+                fator = 0.67
+            }
+
+            let pesoIdeal = (52 + (fator * (altura - 152.4)));
+
+            pSaida.textContent = `O peso ideal para sua altura é: ${pesoIdeal.toFixed(2)}`
+        };
+    </script>
+
+    <img src="../images/ex3.png" alt="Exercicio 3" width="100%">
+
+</body>
+</html>
