@@ -1,0 +1,40 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: rgb(195, 195, 195);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 50%;
+    margin: auto;
+}
+
+div {
+    text-align: center;
+}
+
+li {
+    border: none;
+    background-color: snow;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+li > button {
+    font-size: smaller;
+    float: right;
+    color: red;
+    border: none;
+    background-color: snow;
+    cursor: pointer;
+}

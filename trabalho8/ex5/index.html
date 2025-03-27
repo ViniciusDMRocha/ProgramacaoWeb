@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <main>
+            <h1>A FACOM</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cum, autem adipisci tempora officiis minima magnam quibusdam mollitia temporibus quos maiores, dolore aspernatur molestiae. Excepturi ea aut quam nobis numquam.</p>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique officia minus non molestias, omnis officiis assumenda maxime dolore exercitationem a perspiciatis obcaecati molestiae eius totam vel fugiat eum reiciendis aspernatur?</P>
+            <button type="button" id="buttonOpenModal">Abrir Modal</button>
+        </main>
+
+        <div id="ModalTeste" class="modal">
+            <div class="modalContent">
+                <h2>Olá! Seja bem vindo!</h2>
+                <button class="buttonClose">Ok</button>
+            </div>
+        </div>
+
+        <script>
+            window.onload = function () {
+                const modal = document.querySelector(".modal");                     //seleciona a classe referente ao .modal
+                const buttonClose = document.querySelector(".buttonClose");         //seleciona a classe referente ao .buttonClose
+                
+                //Botão para abrir o modal
+                const buttonOpenModal = document.querySelector("#buttonOpenModal");
+                buttonOpenModal.onclick = function() {
+                    modal.style.display = 'block';          // Troca o display para poder ser visualizado
+                }
+
+                //Botão para fechar o modal
+                buttonClose.onclick = function() {
+                    modal.style.display = 'none';           // Troca o display para não ser visualizado
+                }
+            }
+        </script>
+    </body>
+</html>

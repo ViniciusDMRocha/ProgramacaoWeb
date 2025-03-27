@@ -1,0 +1,43 @@
+body {
+    font-family: Helvetica;
+    line-height: 1.5rem;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-image: url("images/teclado.JPG");
+    background-repeat: no-repeat;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modalContent {
+    background-color: #eee;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 5px #333;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modalContent button {
+    width: 100%;
+    background-color: rgb(179, 213, 235);
+    border-radius: 2px;
+    border: 1px solid rgb(200, 223, 243);
+}
+
+.modalContent button:hover {
+    background-color: rgb(200, 223, 243);
+}

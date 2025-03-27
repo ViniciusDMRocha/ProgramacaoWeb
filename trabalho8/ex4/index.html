@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 4</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+
+    <body>
+        <main>
+
+            <h2>Cadastro de Usuário</h2>
+
+            <form name="cadastro" method="post">
+                <div>
+                    <label for="usuario">Usuário:</label><br>
+                    <input type="text" id="usuario" name="usuario">
+                    <span></span>
+                </div>
+                <div>
+                    <label for="senha">Senha:</label><br>
+                    <input type="password" id="senha" name="senha">
+                    <span></span>
+                </div>
+                <div>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email">
+                    <span></span>
+                </div>
+                <button>Cadastrar</button>
+            </form>
+
+        </main>
+    
+    <script>
+
+        document.forms.cadastro.onsubmit = validaForm;  // indica que ao realizar o onsubmit do form realiza a função validaForm
+        function validaForm(e) {
+            let form = e.target;
+            let formValido = true;  // seta como true pra verificações futuras
+
+            const spanUsuario = form.usuario.nextElementSibling;        // Coleta o nextSibling do id especificado, no caso o span
+            const spanSenha = form.senha.nextElementSibling;            // Coleta o nextSibling do id especificado, no caso o span
+            const spanEmail = form.email.nextElementSibling;            // Coleta o nextSibling do id especificado, no caso o span
+
+            spanUsuario.textContent = "";           // Deixa vazio o span
+            spanSenha.textContent = "";             // Deixa vazio o span
+            spanEmail.textContent = "";             // Deixa vazio o span
+
+            if (form.usuario.value === "") {        // Validação para verificar se o campo está vazio ou não
+                spanUsuario.textContent = "Usuário deve ser preenchido!"
+                formValido = false;     // Troca o estado de formValido para barrar o envio
+            }
+
+            if (form.senha.value === "") {          // Validação para verificar se o campo está vazio ou não
+                spanSenha.textContent = "Senha deve ser preenchido!"
+                formValido = false;     // Troca o estado de formValido para barrar o envio
+            }
+
+            if (form.email.value === "") {          // Validação para verificar se o campo está vazio ou não
+                spanEmail.textContent = "Email deve ser preenchido!"
+                formValido = false;     // Troca o estado de formValido para barrar o envio
+            }
+
+            if(!formValido)
+                e.preventDefault();     // Previni o envio do form com campos vazios
+        }
+
+    </script>    
+    
+    </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Currículo de Fulano de Tal</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+
+  <body>
+    
+    <header>
+      <section>
+        <h1>Clínica Miotto Health</h1>
+      </section>
+    </header>
+        
+    <nav>
+      <section>
+        <ul>
+          <li><button>Home</button></li>
+          <li><button>Galeria</button></li>
+          <li><button>Login</button></li>
+        </ul>
+      </section>
+    </nav>
+    
+    <main>
+      <div class="tabs">
+        
+        <section>
+            <h2>Bem vindo à Clínica Miotto</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              pharetra vulputate sapien et laoreet. Pellentesque semper felis id
+              pretium hendrerit. Nam tempus ante elementum, rhoncus sapien eget,
+              dictum orci. Class aptent taciti sociosqu ad litora torquent per
+              conubia nostra, per inceptos himenaeos. Proin dignissim est et ipsum
+              egestas, eu euismod dui dignissim. Vestibulum porttitor nisi ut massa
+              fringilla eleifend. In hac habitasse platea dictumst. Proin id tortor
+              quis dolor euismod consequat. Nunc bibendum vehicula lectus ac
+              iaculis. Morbi quis malesuada velit, at rutrum ante. Maecenas molestie
+              pharetra libero, nec porttitor felis facilisis ut. Aenean pretium
+              tristique tincidunt
+            </p>
+            <p>
+              Morbi posuere lacus et nulla elementum, ut bibendum ante fringilla.
+              Donec ac sodales nisi. Pellentesque ac leo lacinia, placerat sapien
+              ut, luctus tortor. Donec molestie mattis diam, et pharetra risus
+              rhoncus nec. Morbi eleifend consequat nulla. Morbi tincidunt, erat ac
+              sollicitudin mollis, ligula tellus bibendum leo, vitae pharetra elit
+              felis in est. Cras semper est turpis, imperdiet porta turpis lobortis
+              quis. Pellentesque id justo ut magna porttitor venenatis. Donec dictum
+              dapibus tempor. Suspendisse sem magna, porta ut ante gravida,
+              scelerisque rutrum odio. Pellentesque ornare risus ut tellus
+              sollicitudin, et commodo tellus ornare. Praesent iaculis pretium dolor
+              in auctor.
+            </p>
+            
+            
+            
+            <h2>Nossa missão</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              fringilla eleifend nunc, at aliquet turpis ultrices maximus. Sed at
+              placerat purus. Ut id eros id leo pellentesque tempor. Curabitur felis
+              elit, vestibulum a ante posuere, ornare pretium justo. Orci varius
+              natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+              mus.
+            </p>
+          
+            <h2>Nossos valores</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+              fringilla eleifend nunc, at aliquet turpis ultrices maximus. Sed at
+              placerat purus. Ut id eros id leo pellentesque tempor. Curabitur felis
+              elit, vestibulum a ante posuere, ornare pretium justo. Orci varius
+              natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+              mus.
+            </p>
+        </section> 
+
+        <section>
+          <h2>Nossa Estrutura</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="images/1.jpg"
+                    alt="Hospital"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+                <td>
+                  <img
+                    src="images/2.jpg"
+                    alt="Hospital"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+                <td>
+                  <img
+                    src="images/3.jpg"
+                    alt="Hospital"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+                <td>
+                  <img
+                    src="images/4.jpg"
+                    alt="Hospital"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="images/5.jpg"
+                    alt="Hospital"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+                <td>
+                  <img
+                    src="images/6.jpg"
+                    alt="Hospital"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+                <td>
+                  <img
+                    src="images/7.jpg"
+                    alt="Hospital"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+                <td>
+                  <img
+                    src="images/8.jpg"
+                    alt="Hospital"
+                    width="200"
+                    height="200"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+              <form enctype="multipart/form-data" action="cadastra.php" method="post">
+                <div>
+                  <label for="username">Usuário:</label>
+                  <input type="text" name="clientUsername" id="username">
+                </div>
+                <div>
+                  <label for="password">Senha:</label>
+                  <input type="password" name="clientPassword" id="password">
+                </div>
+                <button type="submit"><i class="material-icons">login</i>Entrar</button>
+        </section>
+
+      </div>
+
+      <footer>
+        <address>
+          Av. João Naves de Ávila, 2121 - Santa Mônica, Uberlândia - MG
+        </address>
+      </footer>
+
+      <script>
+        
+        window.onload = function () {
+          buttons = document.querySelectorAll("nav button");
+          for (let button of buttons) {
+            button.addEventListener("click", changeTab);      // Aqui a gente atribui para todos os botões que são filhos do nav uma função,
+          }                                                   // que nesse caso ativa na hora do click, chamando o changeTab
+          openTab(2);
+        }
+
+        function changeTab(e) {                                 // Essa função, de acordo com o evento que foi pegado, descobre o index para saber exatamente qual section deve ser mostrado
+          const botaoAcionado = e.target;                       // pega o botão acionado
+          const liDoBotao = botaoAcionado.parentNode;           // pega o LI que é pai dele
+          const nodes = Array.from(liDoBotao.parentNode.children);      // cria um array dos filhos do pai dele
+          const index = nodes.indexOf(liDoBotao);               // pega o index do botão que foi clicado
+          openTab(index);                                       // chama a função que abre o section que queremos
+        }
+
+        function openTab(i) {
+          const tabActive = document.querySelector(".tabActive");           // verifica se algum section ja está selecionado e o desativa
+          if (tabActive !== null)
+            tabActive.classList.remove("tabActive");
+
+          const buttonActive = document.querySelector(".buttonActivate");     // mesma função do trecho acima, mas agora desativando o botão
+          if (buttonActive !== null)
+            buttonActive.classList.remove("buttonActive");
+
+          document.querySelectorAll(".tabs section")[i].classList.add("tabActive")        // aciona a classe no section referente ao botão selecionado, fazendo assim aparecer na tela
+          document.querySelectorAll(".nav button")[i].classList.add("buttonActive")       // registra o botão clicado como ativado
+        }
+
+      </script>
+  </body>
+</html>

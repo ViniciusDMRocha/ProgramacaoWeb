@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 3</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+
+        <body>
+            <main>
+
+                <div>
+                    <label for="interesse">Interesse:</label>
+                    <input type="text" id="interesse" name="interesse">
+                </div>           
+                
+                <ol>   
+                </ol>
+
+            </main>
+            <script>
+
+                window.onload = function () {   // Evita erros no carregamento da página
+                    const campoInteresse = document.querySelector("#interesse");    // Capta a mensagem do campo #interesse
+                    campoInteresse.addEventListener("keyup", e => {
+                        if (e.key === "Enter") {
+                            adicionaInteresse();    // Chama a função quando o eventListener for ativado pela tecla "Enter"
+                        }
+                    });
+                }
+
+                function adicionaInteresse() {
+
+                    const campoInteresse = document.querySelector("#interesse");
+                    const listaInteresses = document.querySelector("ol");
+
+                    const novoLi = document.createElement("li");        // Cria um novo elemento na lista
+                    const novoSpan = document.createElement("span");        // Adiciona um campo de span
+                    const novoBotao = document.createElement("button");     // Adiciona também o botão
+
+                    novoSpan.textContent = campoInteresse.value;
+                    novoBotao.textContent = 'X';      // valores dos textComponent que aparecerão
+
+                    novoLi.appendChild(novoSpan);
+                    novoLi.appendChild(novoBotao);              // Adiciona o span e o botão no elemento LI
+                    listaInteresses.appendChild(novoLi);        // Adiciona o próprio LI na lista
+
+                    novoBotao.onclick = function () {
+                    listaInteresses.removeChild(novoLi);       // Capta o click do usurario no botão para remover o LI da lista
+                }
+
+                campoInteresse.value = '';
+            }
+
+        </script>
+    </body>
+</html>
